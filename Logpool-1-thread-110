@@ -1,0 +1,8 @@
+2016-02-13 16:34:50:838 - info: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+2016-02-13 16:34:50:841 - info: Appium REST http interface listener started on 0.0.0.0:63855
+2016-02-13 16:34:50:844 - info: Console LogLevel: info
+2016-02-13 16:34:50:845 - info: File LogLevel: info
+2016-02-13 16:34:51:322 - info: --> GET /wd/hub/status {}
+2016-02-13 16:34:51:330 - info: <-- GET /wd/hub/status 200 7.961 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
+2016-02-13 16:34:51:337 - info: --> GET /wd/hub/status {}
+2016-02-13 16:34:51:341 - info: <-- GET /wd/hub/status 200 3.339 ms - 105 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}}}
