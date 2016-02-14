@@ -1,8 +1,5 @@
 package com.test.classes;
 
-/**
- * Command Prompt - this class contains method to run windows and mac commands  
- */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

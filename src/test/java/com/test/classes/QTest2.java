@@ -2,13 +2,13 @@ package com.test.classes;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -21,7 +21,7 @@ public class QTest2 {
 
 	private IOSDriver<MobileElement> driver;
 	private AppiumDriverLocalService service;
-	
+	CommandPrompt cp = new CommandPrompt();
 	
 	AvailabelPorts avlport = new AvailabelPorts();
 	@BeforeClass(alwaysRun = true)
@@ -55,28 +55,76 @@ public class QTest2 {
 	@AfterClass()
 	public void killServer() throws InterruptedException, IOException {
 		driver.quit();
+		service.stop();
 	}
-
+	
 	@Test
-	public void testMethodFive_5() throws Exception {
+	public void methodtwo() throws Exception {
 		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@name='Store locator']")).click();
 		Thread.sleep(3000);
+		driver.hideKeyboard();
+	}
+	
+	@Test
+	public void methodthree() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Special offers']")).click();
+		Thread.sleep(3000);
 
 	}
 	
-//	@Test
-//
-//	public void testMethodFive_6() throws Exception {
-//		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-//		Thread.sleep(3000);
-//		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-//		Thread.sleep(3000);
-//		driver.findElement(By.xpath("//*[@name='Store locator']")).click();
-//		Thread.sleep(3000);
-//
-//	}
+	@Test
+	public void methodfour() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Browse all groceries']")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void methodfive() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Discover the finest range']")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void methodsix() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Add your Clubcard']")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void methodseven() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Browse all groceries']")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void methodeight() throws Exception {
+		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//*[@name='Home']")).click();
+		Thread.sleep(3000);
+	}
 }
