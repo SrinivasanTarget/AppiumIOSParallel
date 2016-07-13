@@ -45,8 +45,8 @@ public class QTest1{
 		capabilities.setCapability("deviceName", "Iphone");
 //		capabilities.setCapability("autoLaunch", true);
 		capabilities.setCapability("newCommandTimeout", 90);
-		capabilities.setCapability("udid", "3ea8e5503948cfce2076352f7a0881f76b4e7935");
-		capabilities.setCapability("bundleId", "com.tesco.grocery");
+		capabilities.setCapability("udid", "");
+		capabilities.setCapability("bundleId", "");
 		capabilities.setCapability("noReset", true);
 		driver = new IOSDriver<MobileElement>(service.getUrl(),capabilities);
 	}
@@ -57,73 +57,5 @@ public class QTest1{
 		service.stop();
 	}
 	
-	@Test
-	public void methodtwo() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Store locator']")).click();
-		Thread.sleep(3000);
-		driver.hideKeyboard();
-	}
-	
-	@Test
-	public void methodthree() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Special offers']")).click();
-		Thread.sleep(3000);
 
-	}
-	
-	@Test
-	public void methodfour() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Browse all groceries']")).click();
-		Thread.sleep(3000);
-	}
-	
-	@Test
-	public void methodfive() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Discover the finest range']")).click();
-		Thread.sleep(3000);
-	}
-	
-	@Test
-	public void methodsix() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Add your Clubcard']")).click();
-		Thread.sleep(3000);
-	}
-	
-	@Test
-	public void methodseven() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Browse all groceries']")).click();
-		Thread.sleep(3000);
-	}
-	
-	@Test
-	public void methodeight() throws Exception {
-		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='action_bar_up_navigation'][1]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@name='Home']")).click();
-		Thread.sleep(3000);
-	}
 }
